@@ -7,9 +7,13 @@
 | 100        | 100  | ?        | ?      |
 | 2000       | ?    | ?        |        |
 
+  > | N Elements | O(N) | O(log N) | O(N^2)  |
+  > |------------|------|----------|---------|
+  > | 100        | 100  | 7        | 10000   |
+  > | 2000       | 2000 | 11       | 4000000 |
 
-2. If we have an O(N^2) algorithm that processes an array and find that it takes 256 steps, what is teh size of the array?
-
+2. If we have an O(N^2) algorithm that processquareroot 256ses an array and find that it takes 256 steps, what is teh size of the array?
+  > 16
 
 3. Use Big O Notation to descrive the time complexity of the following function. It finds the greates product of any pair of two numbers within a given array.
 ``` python
@@ -23,6 +27,7 @@ def greatestProduct(array):
 
   return greatestProductSoFar
 ```
+  > O(N^2)
 
 
 4. The following function finds the greatest single number within an array, but has an afficiency of O(N^2). Rewrite the function so That it becomes a speed O(N).
@@ -66,3 +71,17 @@ def greatest_number(array)
   end
 end
 ```
+
+  > ``` ruby
+  > def greatest_number(array)
+  >   greatest = array[0]
+  > 
+  >   array.each do |i|
+  >     if i > greatest
+  >       greatest = i
+  >     end
+  >   end
+  > 
+  >   return greatest
+  > end
+  > ```
