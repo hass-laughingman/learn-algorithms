@@ -1,6 +1,6 @@
 # Speeding Up Your Code with Big O
 
-1. Replace the question marks in the following table to descrive how many steps occur for a given number of data elements across various types of Big O.
+1. Replace the question marks in the following table to describe how many steps occur for a given number of data elements across various types of Big O.
 
 | N Elements | O(N) | O(log N) | O(N^2) |
 |------------|------|----------|--------|
@@ -15,7 +15,7 @@
 2. If we have an O(N^2) algorithm that processquareroot 256ses an array and find that it takes 256 steps, what is teh size of the array?
   > 16
 
-3. Use Big O Notation to descrive the time complexity of the following function. It finds the greates product of any pair of two numbers within a given array.
+3. Use Big O Notation to describe the time complexity of the following function. It finds the greates product of any pair of two numbers within a given array.
 ``` python
 def greatestProduct(array):
   greatestProductSoFar = array[0] * array[1]
