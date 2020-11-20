@@ -10,7 +10,8 @@
   - Insertion at the end of the array
       > 1
   - Deletion at the beginning of the array
-      > 101
+      > ~101~
+      > 100. 1 to delete then 99 to shift remaining items
   - Deletion at the end of the array
       > 1
 
@@ -24,7 +25,8 @@
   - Insertion at the end of the array
       > 101
   - Deletion at the beginning of the array
-      > 101
+      > ~101~
+      > 100. 1 to delete then 99 to shift remaining items
   - Deletion at the end of the array
       > 1
 
