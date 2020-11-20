@@ -1,4 +1,6 @@
-def has_duplicate(array)
+# O(N^2) algorithm
+
+def has_duplicate?(array)
   steps = 0 # count of steps
 
   array.each_index do |i|
@@ -13,4 +15,4 @@ def has_duplicate(array)
   return false
 end
 
-has_duplicate_value([1, 4, 5, 2, 9])
+puts has_duplicate?([1, 4, 5, 2, 9])
