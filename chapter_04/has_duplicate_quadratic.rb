@@ -1,4 +1,4 @@
-def has_duplicate_value(array)
+def has_duplicate(array)
   steps = 0 # count of steps
 
   array.each_index do |i|

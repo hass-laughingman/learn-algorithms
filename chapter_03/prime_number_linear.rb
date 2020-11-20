@@ -1,14 +1,3 @@
-# O(N) algorithms
-
-# print items from array
-def print_things(things)
-  things.each do |thing|
-    p "Here's a thing: #{thing}"
-  end
-end
-
-print_things(%w[apples baboons cribs dulcimers])
-
 # detect given number is a prime number
 def is_prime?(number)
   (2...number).each do |item|
