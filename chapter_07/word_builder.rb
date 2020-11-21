@@ -3,8 +3,10 @@ def word_builder(array)
 
   array.each do |i|
     array.each do |j|
-      if i != j
-        collection.push(i + j)
+      array.each do |k|
+        if i != j && j != k && i != k
+          collection.push(i + j + k)
+        end
       end
     end
   end
