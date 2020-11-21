@@ -9,6 +9,14 @@ def find_directories(directory)
 
       # print out the full path name
       puts "#{directory}/#{filename}"
+
+      # loop through second-level subdirectory
+      Dir.foreach("#{directory}/#{filename}") do |inner_filename|
+        if File.directory?("#{directory}/#{filename}/#{inner_filename}") &&
+            filename != "." && filename != ".."
+            puts "#{directory}/#{filename}/#{inner_filename}"
+        end
+      end
     end
   end
 end
