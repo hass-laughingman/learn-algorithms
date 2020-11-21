@@ -4,8 +4,8 @@
   > O(N)
 
 
-2. Use Big O Notation to describe the time complexity of an algorithm that takes 2N^2.
-  > O(N^2)
+2. Use Big O Notation to describe the time complexity of an algorithm that takes 2N<sup>2</sup>.
+  > O(N<sup>2</sup>)
 
 
 3. Use Big O Notation to describe the time complexity of the following function, which returns the sum of all numbers of an array after the numbers have been doubled.
@@ -57,4 +57,4 @@ def every_other(array)
   end
 end
 ```
-  > O(N^2)
+  > O(N<sup>2</sup>)
