@@ -72,5 +72,30 @@ class QuicksortArray
     # is to the right of the pivot
     quicksort!(pivot_index + 1, right_index)
   end
-end
 
+  def quickselect!(kth_lowest_value, left_index, right_index)
+    # if we rach a base case - that is, that the subarray has one cell,
+    # we know we've found the value we're looking for
+    return @array[left_index] if right_index - left_index <= 0
+
+    # partition the array and grab the index of the pivot
+    pivot_index = partition!(left_index, right_index)
+
+    # if what we're looking for is to the left of the pivot
+    if kth_lowest_value < pivot_index
+      # recursively perform quickselect on the subarray to
+      # the left of the pivot
+      quickselect!(kth_lowest_value, left_index, pivot_index - 1)
+    
+    # if what we're lookign for is to the right of the pivot
+    elsif kth_lowest_value > pivot_index
+      # recursively perform quickselect on the subarray to
+      # the right of the pivot
+      quickselect!(kth_lowest_value, pivot_index + 1, right_index)
+
+    # if kth_lowest_value == pivot_index
+    else
+      @array[pivot_index]
+    end
+  end
+end
