@@ -1,14 +1,16 @@
 def max(array)
-  # base case - if the array has only one element, it is
-  # by definition the greatest number
   return array[0] if array.length == 1
 
-  # compare the first element with the greatest element
-  # from the remainder of the array. if the first element
-  # is greater, return it as the greatest number
-  if array[0] > max(array[1, array.length - 1])
+  # calculate the max of the remainder of the array
+  # and store it inside a variable
+
+  max_of_remainder = max(array[1, array.length - 1])
+
+  # comparison of first number against this variable
+
+  if array[0] > max_of_remainder
     array[0]
   else
-    max(array[1, array.length - 1])
+    max_of_remainder
   end
 end
