@@ -78,4 +78,31 @@ class LunkedList
     # the new node
     current_node.next_node = new_node
   end
+
+  def delete_at_index(index)
+    # if we are deleting the first node
+    if index.zero?
+      # simply set the first node to be what is currently the second node
+      first_node = first_node.new_node
+      return
+    end
+
+    current_node = first_node
+    current_index = 0
+
+    # first, we find the node immediately before the one we
+    # want to delete and call it current_node
+    while current_index < (index - 1) do
+      current_node = current_node.next_node
+      current_index += 1
+    end
+
+    # we find the node that comes after the one we're delting
+    node_after_deleted_node = current_node.next_node.next_node
+
+    # we change the link to current_node node to point to the
+    # node_after_deleted_node, leaving the node we want
+    # to delete out the list
+    current_node.next_node = node_after_deleted_node
+  end
 end
