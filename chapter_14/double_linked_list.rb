@@ -13,5 +13,27 @@ class DoubleLinkedList
     @first_node = first_node
     @last_node = last_node
   end
+
+  def insert_at_end(value)
+    new_node = New.new(value)
+
+    # if there are no elements yet in the linked list
+    if !first_node
+      @first_node = new_node
+      @last_node = new_node
+    
+    # if the linked list already has at least one node
+    else
+      new_node.previous_node = @last_node
+      @last_node.next_node = new_node
+      @last_node = new_node
+    end
+  end
+
+  def remove_from_front
+    removed_node = @first_node
+    @first_node = @first_node.next_node
+    return removed_node
+  end
 end
 
