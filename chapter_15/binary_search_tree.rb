@@ -51,7 +51,7 @@ class Tree
     end
   end
 
-  def delete(value, node = nil)
+  def delete(value, node = @root_node)
     # base case is when we've hit the bottom of the tree,
     # and the parent node has no childres
     if node.nil?
@@ -91,6 +91,13 @@ class Tree
         node
       end
     end
+  end
+
+  def traverse_and_print(node = @root_node)
+    return if node.nil?
+    traverse_and_print(node.left_child)
+    puts node.value
+    traverse_and_print(node.right_child)
   end
 
   private
