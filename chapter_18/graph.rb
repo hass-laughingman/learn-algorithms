@@ -1,3 +1,5 @@
+require_relative '../chapter_09/queue'
+
 class Vertex
   attr_accessor :value, adjacent_vertices
 
@@ -53,6 +55,36 @@ def dfs(vertex, search_value, visited_vertices = {})
 
   # if required vertex not found return nil
   nil
+end
+
+def bfs_traverse(starting_vertex)
+  queue = Queue.new
+
+  visited_vertices = {}
+  visited_vertices[starting_vertex.value] = true
+
+  # while the queue is not empty
+  while queue.read
+
+    # remove the first vertex off the queue and make
+    # it current vertex
+    current_vertex = queue.dequeue
+
+    # print the current vertex value
+    puts current_vertex.value
+
+    # iterate over the current vertex's adjacent vertices
+    current_vertex.adjacent_vertices.each do |adjacent_vertex|
+      # skip if previously visited
+      next if visited_vertices[adjacent_vertex.value]
+
+      # mark the adjacent vertex as visited
+      visited_vertices[adjacent_vertex.value] = true
+
+      # add the adjacent vertex to the queue
+      queue.enqueu(adjacent_vertex)
+    end
+  end
 end
 
 alice = Vertex.new('alice')
