@@ -82,4 +82,14 @@ class Trie
     end
     words
   end
+
+  def autocomplete(prefix)
+    current_node = search(prefix)
+
+    return nil if current_node.nil?
+
+    return collect_all_words(current_node)
+  end
 end
+
+
