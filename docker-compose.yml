@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    command: >
+        sh -c '
+          # make install-tools &&
+          sleep 100d
+        '
+    volumes:
+      - .:/usr/src/app
+  
