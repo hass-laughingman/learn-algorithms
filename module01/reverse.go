@@ -1,7 +1,5 @@
 package module01
 
-import "strings"
-
 // Reverse will return the provided word in reverse
 // order. Eg:
 //
@@ -9,11 +7,11 @@ import "strings"
 //   Reverse("alphabet") => "tebahpla"
 //
 func Reverse(word string) string {
-	var sb strings.Builder
+	var res string
 
-	for i := len(word) - 1; i >= 0; i-- {
-		sb.WriteByte(word[i])
+	for _, r := range word {
+		res = string(r) + res
 	}
 
-	return sb.String()
+	return res
 }
